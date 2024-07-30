@@ -1,0 +1,41 @@
+{% extends "crudapp/layout.html" %}
+
+{% block title %}
+    View Record
+{% endblock %}
+
+{% block content %}
+
+    <div class="card">
+        
+        <div class="card-body">
+            <h5 class="text-center">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                &nbsp;
+                {{record.first_name|upper}} {{record.last_name|upper}}
+            </h5>
+            <hr>
+            <p><strong>ID : </strong> {{record.id}}</p>
+            <p><strong>Email : </strong> {{record.email}}</p>
+            <p><strong>Phone : </strong> {{record.phone}}</p>
+            <p><strong>Address : </strong> {{record.address}}</p>
+            <p><strong>Country : </strong> {{record.country}}</p>
+            <p><strong>State : </strong> {{record.state}}</p>
+            <p><strong>City : </strong> {{record.city}}</p>
+        </div>
+    </div>
+    <br>
+    <a href="{% url 'dashboard' %}" class="btn btn-primary">
+        Back <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+    </a>
+    &nbsp;
+    <a href="{% url 'update' record.id %}" class="btn btn-info">
+        Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    </a>
+    &nbsp;
+    <a href="{% url 'delete' record.id %}" class="btn btn-danger">
+        Delete <i class="fa fa-trash-o" aria-hidden="true"></i>
+    </a>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "crudapp/layout.html" %}
+
+{% block title %}
+    CRUD APP
+{% endblock %}
+
+{% block content %}
+
+    <div class="text-center">
+
+        <br>
+
+        <h3>.....Welcome! To My CRUD App.....</h3>
+
+        <br>
+
+        <h5>Keep track of Your Records Effectively! </h5>
+        <hr>
+        <br>
+
+        <a class="btn btn-primary" type="button" href="{% url 'register' %}">Create your account <i class="fa fa-user-plus" aria-hidden="true"></i>
+        </a>
+
+
+    </div>    
+
+{% endblock %}

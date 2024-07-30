@@ -1,0 +1,29 @@
+{% extends "crudapp/layout.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Update
+{% endblock %}
+
+{% block content %}
+    <div class="container bg-light shadow-md p-5 form-layout">
+
+        <h3>Update Records</h3>
+
+        <hr>
+        <br>
+
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+
+            {{form|crispy}}
+
+            <br>
+
+            <button type="submit" class="btn btn-primary w-50 btn-block p-2"> Update </button>
+            <a href="{% url 'dashboard' %}" class="btn btn-primary w-25">Back</a>
+        </form>
+
+    </div>
+
+{% endblock %}
